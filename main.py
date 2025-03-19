@@ -15,9 +15,13 @@ def your_menu(foods):
     except IndexError as error:
         print(f"{error} was entered.")
         print("Next time try entering something on the menu!")
+        your_menu(foods)
     except ValueError as error:
         print(f"{error} was entered.")
         print("Next time try entering something between 1 and 5!")
+        your_menu(foods)
+
+
 
 menu_items = [
     "Yakisoba",
